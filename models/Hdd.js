@@ -11,6 +11,10 @@ Hdd.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        type:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         part_number: {
             type: DataTypes.STRING,
             allowNull: false,
