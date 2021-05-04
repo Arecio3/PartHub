@@ -11063,6 +11063,6 @@ const ssdData = [
     }
   ]
 
-  const seedGallery = () => Ssd.bulkCreate(ssdData);
+  const seedSsd = () => Ssd.bulkCreate(ssdData);
 
-  module.exports = seedGallery;
+  module.exports = seedSsd;

@@ -11813,6 +11813,6 @@ const gpuData = [
     }
   ]
   
-  const seedGallery = () => Gpu.bulkCreate(gpuData);
+  const seedGpu = () => Gpu.bulkCreate(gpuData);
 
-  module.exports = seedGallery;
+  module.exports = seedGpu;
