@@ -10312,6 +10312,6 @@ const hddData = [
       "url": "https://hdd.userbenchmark.com/SpeedTest/2864/ST960821A"
     }
   ]
-  const seedGallery = () => Hdd.bulkCreate(hddData);
+  const seedHdd = () => Hdd.bulkCreate(hddData);
 
-  module.exports = seedGallery;
+  module.exports = seedHdd;
