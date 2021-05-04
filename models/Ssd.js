@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Gpu extends Model { }
+class Ssd extends Model { }
 
-Gpu.init(
+Ssd.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -42,8 +42,8 @@ Gpu.init(
     },
     {
         sequelize,
-        modelName: 'gpu'
+        modelName: 'ssd',
     }
-)
+);
 
-module.exports = Gpu;
+module.exports = Ssd;
