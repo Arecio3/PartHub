@@ -1,6 +1,7 @@
 const { CPU } = require('../models');
 const cpudata = [
   {
+    
     "type": "CPU",
     "part_number": "BX8070811900K",
     "brand": "Intel",

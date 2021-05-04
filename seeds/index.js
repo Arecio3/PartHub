@@ -1,11 +1,17 @@
 const sequelize = require('../config/connection');
+
 const seedCPU = require('./CPUData');
 const seedGpu = require('./gpuData');
 const seedHdd = require('./hddData');
 const seedSsd = require('./ssdData');
 
+
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+  try{
+    await sequelize.sync({ force: true });
+
+    // await seedCPU();
+  
 
   await seedCPU();
 
@@ -15,7 +21,15 @@ const seedAll = async () => {
 
   await seedSsd();
 
-  process.exit(0);
+ 
+    process.exit(0);
+  }
+  catch (err){
+    console.log(err);
+  }
+  
+  
+
 };
 
 seedAll();

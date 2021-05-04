@@ -3,12 +3,6 @@ const sequelize = require('../config/connection');
 class CPU extends Model{}
 CPU.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-          },
           type: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -38,9 +32,15 @@ CPU.init(
             allowNull: false,
           },
           url: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
           },
+          id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+          }
 
 
           
