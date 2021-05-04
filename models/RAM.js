@@ -40,6 +40,11 @@ Ram.init(
             allowNull: false,
         }
     }
+    ,
+    {
+        sequelize,
+        modelName: 'ram'
+    }
 )
 
 module.exports = Ram;
