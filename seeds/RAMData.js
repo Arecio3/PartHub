@@ -1,6 +1,6 @@
-const Hdd = require('../models');
+const Ram = require('../models');
 
-const hddData = [
+const ramData = [
     {
       "type": "RAM",
       "part_number": "F4-2400C14Q2-128GRK",
