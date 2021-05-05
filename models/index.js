@@ -1,6 +1,8 @@
 const CPU = require('./CPU');
 const Gpu = require('./Gpu');
-const RAM = require('./RAM');
+const Ram = require('./RAM');
+const Hdd = require('./Hdd');
+const Ssd = require('./Ssd');
 
 
-module.exports = { CPU, Gpu, RAM };
+module.exports = { CPU, Gpu, Ram, Hdd,Ssd };

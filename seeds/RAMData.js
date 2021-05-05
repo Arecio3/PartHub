@@ -1,4 +1,4 @@
-const Ram = require('../models');
+const {Ram} = require('../models');
 
 const ramData = [
     {
@@ -1742,3 +1742,7 @@ const ramData = [
       "url": "https://ram.userbenchmark.com/SpeedTest/89412/GSKILL-F3-12800CL10-8GBXL-1x8GB"
     }
   ]
+
+  const seedRam = () => Ram.bulkCreate(ramData);
+
+  module.exports = seedRam;

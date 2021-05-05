@@ -1,4 +1,4 @@
-const Hdd = require('../models');
+const {Hdd} = require('../models');
 
 const hddData = [
     {

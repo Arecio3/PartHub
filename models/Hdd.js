@@ -5,12 +5,6 @@ class Hdd extends Model { }
 
 Hdd.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
         type:{
             type: DataTypes.STRING,
             allowNull: false,
@@ -42,7 +36,13 @@ Hdd.init(
         url: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
     },
     {
         sequelize,

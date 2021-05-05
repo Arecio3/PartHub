@@ -5,12 +5,6 @@ class Ram extends Model { }
 
 Ram.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
         type:{
             type: DataTypes.STRING,
             allowNull: false,
@@ -42,7 +36,13 @@ Ram.init(
         url: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
     }
     ,
     {
