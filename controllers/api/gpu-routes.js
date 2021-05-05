@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Gpu } = require('../models');
+const { Gpu } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
