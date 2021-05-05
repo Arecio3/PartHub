@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 3001;
 // app.use(session(sess));
 
 // handlebars
-const hbs = exphbs.create();
+const hbs = exphbs.create({ defaultLayout: 'main' });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 // 
