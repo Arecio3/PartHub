@@ -6,6 +6,12 @@
 }
 body {
   background-color: gray !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10%;
+  
 }
 
 span {
@@ -31,13 +37,15 @@ h1 {
 
 .cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5px;
-  margin-bottom: 10%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;;
+  flex: 1 0 300px;
 }
 
 .card-img-top {
     background-image: url('/public/images/ram.jpeg') !important;
 }
+
