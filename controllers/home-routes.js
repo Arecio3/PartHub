@@ -10,8 +10,14 @@ router.get('/register', (req, res) => {
 });
 // login.handlebars
 router.get('/login', (req, res) => {
-  res.render('login')
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
 });
+
+
 // /register post to process the data and add user to the database.
 
 module.exports = router;
