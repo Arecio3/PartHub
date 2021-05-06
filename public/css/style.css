@@ -1,26 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
- * {
-    color: #BBBBBB;
-    font-weight: bold;
- }
- body {
-     background-color: gray !important;
- }
- 
- span {
-    background-color: #f90; 
-    color: black;
-    border-radius: 0.3rem;
-    padding: 2.5px;
+* {
+  color: #bbbbbb;
+  font-weight: bold;
+}
+body {
+  background-color: gray !important;
+}
+
+span {
+  background-color: #f90;
+  color: black;
+  border-radius: 0.3rem;
+  padding: 2.5px;
 }
 
 header {
-    padding: 5px;
+  padding: 5px;
 }
 
 h1 {
-    color: white;
-    padding: 5px;
-    font-size: 55px !important;
+  color: white;
+  padding: 5px;
+  font-size: 55px !important;
+}
+
+.cards h5 {
+  color: #f90;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 10%;
+}
+
+.card-img-top {
+    background-image: url('/public/images/ram.jpeg') !important;
 }
