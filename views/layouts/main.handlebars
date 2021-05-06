@@ -9,6 +9,7 @@
 
 <body>
   <div class="flex-column justify-space-around">
+   {{!-- header --}}
     <header class="container">
       <div class="row">
       <div class="col-3">
@@ -24,12 +25,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
+                 {{#if loggedIn}}
+                    <li class="nav-item">
+                  <a class="nav-link" href="/logout">logout</a>
+                </li>
+                {{else}}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Register</a>
+                  <a class="nav-link" href="/register">Register</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Log in</a>
+                  <a class="nav-link" href="/login">Log in</a>
                 </li>
+                {{/if}}
+                
               </ul>
             </div>
           </div>
@@ -38,20 +46,7 @@
     </div>
     </header>
 
-<div class="col-sm-md-lg-3 d-flex justify-content-center">
-      <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-</div>
+
     <main class="container container-fluid mt-5">
       {{{ body }}}
     </main>
