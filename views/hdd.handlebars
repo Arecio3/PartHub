@@ -1,5 +1,5 @@
 <section class="part-list">
-    <h1 class="badge bg-dark ">CPU List</h1>
+    <h1 class="badge bg-dark ">HDD List</h1>
 
     <table class="table table-lg table-dark table-striped table-hover">
         <thead>
@@ -13,8 +13,8 @@
             </tr>
         </thead>
         <tbody>
-            {{#each cpuList}}
-         {{> cpu-details}}
+            {{#each hddList}}
+         {{> hdd-details}}
             {{/each}}
         </tbody>
     </table>
@@ -22,9 +22,9 @@
 
 
 <section class="part-pop bg-dark p-4">
-    <h2  class="part-pop-title badge bg-warning text-dark p-3">CPU Popularity</h2>
-{{#each cpuPop}}
-<h6>{{brand}} {{model}}</h6>
+    <h2  class="part-pop-title badge bg-warning text-dark p-3">HDD Popularity</h2>
+{{#each hddPop}}
+<h6>{{brand}} {{model}} <span class="partNum">{{part_number}}</span></h6>
 <div class="progress">
     <div class="progress-bar bg-success" role="progressbar" style="width: {{progress samples}}% " aria-valuenow="100" aria-valuemin="0"
         aria-valuemax="100"></div>

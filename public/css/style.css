@@ -9,7 +9,7 @@ body {
   background-color: gray !important;
 }
 
-span {
+.hub {
   background-color: #f90;
   color: black;
   border-radius: 0.3rem;
@@ -36,18 +36,18 @@ h1 {
   flex: 1 0 300px;
 }
 
-.cpu {
+.part-list {
   background-color: #f94 !important;
   padding: 20px;
   border-radius: 0.4rem;
 }
 
-.cpu-pop {
+.part-pop {
   margin-top: 10%;
   border-radius: 0.4rem;
 }
 
-.cpu-pop-title {
+.part-pop-title {
   font-size: 20px !important;
 }
 
@@ -76,4 +76,8 @@ table {
 .navbar a:hover {
   background-color: #f90;
   border-radius: 0.4rem;
+}
+
+.partNum {
+  color: #f90 !important;
 }
