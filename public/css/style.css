@@ -49,3 +49,22 @@ h1 {
     background-image: url('/public/images/ram.jpeg') !important;
 }
 
+.cpu {
+  background-color: #f94 !important;
+  padding: 20px;
+  border-radius: 0.4rem;
+}
+
+.cpu-pop {
+  margin-top: 10%;
+  border-radius: 0.4rem;
+}
+.cpu-pop-title {
+  font-size: 20px !important;
+}
+h6 {
+  padding-top: 5px;
+}
+table {
+  padding: 5px;
+}
