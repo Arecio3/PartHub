@@ -3,15 +3,10 @@
 * {
   color: #bbbbbb;
   font-weight: bold;
+  box-sizing: border-box;
 }
 body {
   background-color: gray !important;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 10%;
-  
 }
 
 span {
@@ -19,10 +14,6 @@ span {
   color: black;
   border-radius: 0.3rem;
   padding: 2.5px;
-}
-
-header {
-  padding: 5px;
 }
 
 h1 {
@@ -45,10 +36,6 @@ h1 {
   flex: 1 0 300px;
 }
 
-.card-img-top {
-    background-image: url('/public/images/ram.jpeg') !important;
-}
-
 .cpu {
   background-color: #f94 !important;
   padding: 20px;
@@ -59,12 +46,34 @@ h1 {
   margin-top: 10%;
   border-radius: 0.4rem;
 }
+
 .cpu-pop-title {
   font-size: 20px !important;
 }
+
 h6 {
   padding-top: 5px;
 }
+
 table {
   padding: 5px;
+}
+
+#partHub {
+  padding-left: 5px !important;
+}
+
+.login {
+  margin: 10%;
+  border-radius: 0.4rem;
+}
+
+.login h2 {
+  text-shadow: 4px 4px 7px  #f90 !important;
+  color: white;
+}
+
+.navbar a:hover {
+  background-color: #f90;
+  border-radius: 0.4rem;
 }
