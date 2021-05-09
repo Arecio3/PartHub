@@ -1,0 +1,35 @@
+<section class="part-list">
+    <h1 class="badge bg-dark ">SSD List</h1>
+
+    <table class="table table-lg table-dark table-striped table-hover">
+        <thead>
+            <tr>
+               
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Benchmark Score</th>
+                <th scope="col">Rank</th>
+                <th scope="col">samples</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each ssdList}}
+         {{> ssd-details}}
+            {{/each}}
+        </tbody>
+    </table>
+</section>
+
+
+<section class="part-pop bg-dark p-4">
+    <h2  class="part-pop-title badge bg-warning text-dark p-3">SSD Popularity</h2>
+{{#each ssdPop}}
+<h6>{{brand}} {{model}} <span class="partNum">{{part_number}}</span></h6>
+<div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width: {{progress samples}}% " aria-valuenow="100" aria-valuemin="0"
+        aria-valuemax="100"></div>
+</div>
+{{/each}}
+
+
+</section>
