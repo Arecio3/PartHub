@@ -47,13 +47,15 @@ Build.init(
             type: DataTypes.INTEGER,
             allowNull:true,
             references: {
-                model: 'sdd',
+                model: 'ssd',
                 key: 'id',
               },
         }
     },
     {
         sequelize,
+        freezeTableName: true,
+         underscored: true,
         
         modelName: 'build',
       }

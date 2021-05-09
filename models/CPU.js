@@ -47,8 +47,8 @@ CPU.init(
     },
     {
         sequelize,
-        freezeTableName: true,
-        underscored: true,
+         freezeTableName: true,
+         underscored: true,
         modelName: 'cpu',
       }
     );
