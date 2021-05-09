@@ -1,15 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 
 * {
-  color: #bbbbbb;
+  color: #535353;
   font-weight: bold;
-  box-sizing: border-box;
+
 }
 body {
-  background-color: gray !important;
+  background-color: black;
 }
-
-.hub {
+header{
+  background-color: #1b1b1b;
+  padding-top:10px;
+  margin-top: 20px;
+}
+span {
   background-color: #f90;
   color: black;
   border-radius: 0.3rem;
@@ -36,19 +40,19 @@ h1 {
   flex: 1 0 300px;
 }
 
-.part-list {
-  background-color: #f94 !important;
+.cpu {
+  background-color: #f94 ;
   padding: 20px;
   border-radius: 0.4rem;
 }
 
-.part-pop {
+.cpu-pop {
   margin-top: 10%;
   border-radius: 0.4rem;
 }
 
-.part-pop-title {
-  font-size: 20px !important;
+.cpu-pop-title {
+  font-size: 20px ;
 }
 
 h6 {
@@ -60,7 +64,7 @@ table {
 }
 
 #partHub {
-  padding-left: 5px !important;
+  padding-left: 5px ;
 }
 
 .login {
@@ -69,15 +73,26 @@ table {
 }
 
 .login h2 {
-  text-shadow: 4px 4px 7px  #f90 !important;
+  text-shadow: 4px 4px 7px  #f90;
   color: white;
 }
-
+.navbar-light .navbar-nav .nav-link{
+  color: #bbbbbb;
+}
 .navbar a:hover {
   background-color: #f90;
-  border-radius: 0.4rem;
+  border-radius: 5px;
 }
-
-.partNum {
-  color: #f90 !important;
+.cards a {
+  text-decoration: none;
+}
+td{
+  color: #bbbbbb;
+}
+h6{
+  color: #bbbbbb;
+}
+.orange
+{
+  background-color: #f90;
 }
