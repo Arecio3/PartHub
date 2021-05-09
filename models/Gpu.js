@@ -46,6 +46,10 @@ Gpu.init(
     },
     {
         sequelize,
+        
+         freezeTableName: true,
+         underscored: true,
+        
         modelName: 'gpu'
     }
 )
