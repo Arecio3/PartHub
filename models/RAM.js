@@ -43,6 +43,14 @@ Ram.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        build_id:{
+            type: DataTypes.INTEGER,
+            allowNull:true,
+            references: {
+                model: 'build',
+                key: 'id',
+              },
+          }
     }
     ,
     {
