@@ -40,6 +40,14 @@ CPU.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+          },
+          build_id:{
+            type: DataTypes.INTEGER,
+            allowNull:true,
+            references: {
+                model: 'build',
+                key: 'id',
+              },
           }
 
 

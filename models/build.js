@@ -10,44 +10,15 @@ Build.init(
             primaryKey:true,
             autoIncrement:true,
         },
-        cpu_id:{
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
+        user_id:{
             type: DataTypes.INTEGER,
-            allowNull:true,
+            allowNull:false,
             references: {
-                model: 'cpu',
-                key: 'id',
-              },
-         
-        },
-        gpu_id:{
-            type: DataTypes.INTEGER,
-            allowNull:true, 
-            references: {
-                model: 'gpu',
-                key: 'id',
-              },
-        },
-        ram_id:{
-            type: DataTypes.INTEGER,
-            allowNull:true,
-            references: {
-                model: 'ram',
-                key: 'id',
-              },
-        },
-        hdd_id:{
-            type: DataTypes.INTEGER,
-            allowNull:true,
-            references: {
-                model: 'hdd',
-                key: 'id',
-              },
-        },
-        ssd_id:{
-            type: DataTypes.INTEGER,
-            allowNull:true,
-            references: {
-                model: 'ssd',
+                model: 'user',
                 key: 'id',
               },
         }
