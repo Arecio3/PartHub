@@ -18,52 +18,52 @@ Build.belongsToMany(CPU,  {
     model:UserBuild,
 }
     });
-// gpu ASSOC
-Gpu.belongsToMany(Build, {
-  through: {
-    model:UserBuild,
-}
-});  
-Build.belongsToMany(Gpu,  {
-  through: {
-    model:UserBuild,
-}
-    });
-// ram ASSOC
-Ram.belongsToMany(Build, {
-  through: {
-    model:UserBuild,
-}
-});  
-Build.belongsToMany(Ram,  {
-  through: {
-    model:UserBuild,
-}
-    });
+// // gpu ASSOC
+// Gpu.belongsToMany(Build, {
+//   through: {
+//     model:UserBuild,
+// }
+// });  
+// Build.belongsToMany(Gpu,  {
+//   through: {
+//     model:UserBuild,
+// }
+//     });
+// // ram ASSOC
+// Ram.belongsToMany(Build, {
+//   through: {
+//     model:UserBuild,
+// }
+// });  
+// Build.belongsToMany(Ram,  {
+//   through: {
+//     model:UserBuild,
+// }
+//     });
 
-// hdd ASSOC
-Hdd.belongsToMany(Build, {
-  through: {
-    model:UserBuild,
-}
-});  
-Build.belongsToMany(Hdd,  {
-  through: {
-    model:UserBuild,
-}
-    });
-// ssd ASSOC
-Ssd.belongsToMany(Build, {
-  through: {
-    model:UserBuild,
-}
-});  
+// // hdd ASSOC
+// Hdd.belongsToMany(Build, {
+//   through: {
+//     model:UserBuild,
+// }
+// });  
+// Build.belongsToMany(Hdd,  {
+//   through: {
+//     model:UserBuild,
+// }
+//     });
+// // ssd ASSOC
+// Ssd.belongsToMany(Build, {
+//   through: {
+//     model:UserBuild,
+// }
+// });  
 
-Build.belongsToMany(Ssd,  {
-  through: {
-    model:UserBuild,
-}
-    });
+// Build.belongsToMany(Ssd,  {
+//   through: {
+//     model:UserBuild,
+// }
+//     });
 // User
 User.hasMany(Build,{
        foreignKey:'build_id',

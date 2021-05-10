@@ -1,3 +1,4 @@
+ {{#if loggedIn}}
 <div class="cards">
     <div class="card p-2 m-2" style="width: 18rem;"><a href="/cpu">
             <img src="/images/nav-cpu.png" class="card-img-top" alt="...">
@@ -56,3 +57,6 @@
     </div>
 
 </div>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
