@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
       req.session.save(() => {
         req.session.loggedIn = true;
   
-        res.status(200).json(dbUserData);
+        res.render('login',{loggedIn: req.session.loggedIn})
       });
     } catch (err) {
       console.log(err);
@@ -48,10 +48,12 @@ router.post('/', async (req, res) => {
   
       req.session.save(() => {
         req.session.loggedIn = true;
-  
-        res
-          .status(200)
-          .json({ user: dbUserData, message: 'You are now logged in!' });
+        var test;
+         res.render('homepage',{test:true ,loggedIn: req.session.loggedIn})
+        // res
+        //   .status(200)
+        //   .json({ user: dbUserData, message: 'You are now logged in!' });
+         
       });
     } catch (err) {
       console.log(err);

@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 const { log } = require('handlebars');
 // homepage.handlebars
 router.get('/', (req, res) => {
-  res.render('homepage')
+  res.render('homepage', {loggedIn: req.session.loggedIn})
 });
 // register.handlebars
 router.get('/register', (req, res) => {
@@ -12,7 +12,13 @@ router.get('/register', (req, res) => {
 });
 // login.handlebars
 router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    
+    res.redirect('/');
+    return;
+  }
   res.render('login');
+ 
 });
 // cpu.handlebars
 router.get('/cpu', async(req, res) => {
