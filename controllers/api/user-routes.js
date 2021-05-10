@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const nodemailer = require('nodemailer');
-const { User } = require('../models');
 require('dotenv').config();
 
 router.post('/', async (req, res) => {
@@ -20,7 +19,7 @@ router.post('/', async (req, res) => {
         }
     });
     let body = {
-      from: 'cuba289@gmail.com', // sender address
+      from:  process.env.EMAIL, // sender address
       to: req.body.email, // list of receivers
       subject: "Thank you for sign up with PartHub", // Subject line
       text: "thanks for signing up with us, now you can compare pc parts",
