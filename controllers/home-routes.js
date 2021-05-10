@@ -199,6 +199,9 @@ router.get('/ssd', async(req, res) => {
   
 });
 
+router.get('/build', (req, res) => {
+  res.render('build')
+});
 
 
 // /register post to process the data and add user to the database.
