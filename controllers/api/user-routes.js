@@ -1,5 +1,8 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const nodemailer = require('nodemailer');
+const { User } = require('../models');
+require('dotenv').config();
 
 router.post('/', async (req, res) => {
     try {
@@ -8,7 +11,28 @@ router.post('/', async (req, res) => {
         email: req.body.email,
         password: req.body.password,
       });
-  
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        port: 993,
+        auth: {
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASS,
+        }
+    });
+    let body = {
+      from: 'cuba289@gmail.com', // sender address
+      to: req.body.email, // list of receivers
+      subject: "Thank you for sign up with PartHub", // Subject line
+      text: "thanks for signing up with us, now you can compare pc parts",
+  }
+  // send mail with defined transport object
+ transporter.sendMail(body, (err, data) => {
+  if(err) {
+      console.log(err);
+      return;
+  } 
+  console.log(data);
+})
       req.session.save(() => {
         req.session.loggedIn = true;
   
