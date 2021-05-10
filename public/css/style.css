@@ -40,18 +40,18 @@ h1 {
   flex: 1 0 300px;
 }
 
-.cpu {
-  background-color: #f94 ;
+.part-list {
+  background-color: #f90;
   padding: 20px;
   border-radius: 0.4rem;
 }
 
-.cpu-pop {
+.part-pop {
   margin-top: 10%;
   border-radius: 0.4rem;
 }
 
-.cpu-pop-title {
+.part-pop-title {
   font-size: 20px ;
 }
 
@@ -95,4 +95,10 @@ h6{
 .orange
 {
   background-color: #f90;
+}
+
+.build-list {
+  background-color: #f90;
+  padding: 20px;
+  border-radius: 0.4rem;
 }

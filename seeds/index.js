@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
  const seedHdd = require('./hddData');
 const seedSsd = require('./ssdData');
 const seedRam = require('./RAMData')
-
+const seedUser = require('./userData')
 
 const seedAll = async () => {
   try{
@@ -16,7 +16,7 @@ const seedAll = async () => {
       await seedHdd();
      await seedSsd();
      await seedRam();
-
+    await seedUser();
  
     process.exit(0);
   }

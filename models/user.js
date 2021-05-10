@@ -36,7 +36,7 @@ class User extends Model {
       },
       build_id:{
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: 'build',
           key: 'id',
