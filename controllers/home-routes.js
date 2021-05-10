@@ -47,7 +47,7 @@ router.get('/cpu', async(req, res) => {
   
 
 
-    res.render('cpu',{cpuList,cpuPop});
+    res.render('cpu',{cpuList,cpuPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -84,7 +84,7 @@ router.get('/ram', async(req, res) => {
   
 
 
-    res.render('ram',{ramList,ramPop});
+    res.render('ram',{ramList,ramPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -121,7 +121,7 @@ router.get('/gpu', async(req, res) => {
   
 
 
-    res.render('gpu',{gpuList,gpuPop});
+    res.render('gpu',{gpuList,gpuPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -159,7 +159,7 @@ router.get('/hdd', async(req, res) => {
   
 
 
-    res.render('hdd',{hddList,hddPop});
+    res.render('hdd',{hddList,hddPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -195,7 +195,7 @@ router.get('/ssd', async(req, res) => {
   
 
 
-    res.render('ssd',{ssdList,ssdPop});
+    res.render('ssd',{ssdList,ssdPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -206,7 +206,7 @@ router.get('/ssd', async(req, res) => {
 });
 
 router.get('/build', (req, res) => {
-  res.render('build')
+  res.render('build',{loggedIn: req.session.loggedIn})
 });
 
 
