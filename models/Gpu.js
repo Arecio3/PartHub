@@ -42,7 +42,15 @@ Gpu.init(
         url: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        build_id:{
+            type: DataTypes.INTEGER,
+            allowNull:true,
+            references: {
+                model: 'build',
+                key: 'id',
+              },
+          }
     },
     {
         sequelize,
