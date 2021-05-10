@@ -1,3 +1,4 @@
+{{#if loggedIn}}
 <section class="part-list">
     <h1 class="badge bg-dark ">RAM List</h1>
 
@@ -33,3 +34,11 @@
 
 
 </section>
+{{else}}
+<div class="container bg-light">
+    <h2>Welcome to PartHub</h2>
+    
+<h6><a href="/login">You must login first to view this page</a></h6>
+</div>
+
+{{/if }}

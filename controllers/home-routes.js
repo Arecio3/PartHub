@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 const { log } = require('handlebars');
 // homepage.handlebars
 router.get('/', (req, res) => {
-  res.render('homepage')
+  res.render('homepage', {loggedIn: req.session.loggedIn})
 });
 // register.handlebars
 router.get('/register', (req, res) => {
@@ -12,7 +12,13 @@ router.get('/register', (req, res) => {
 });
 // login.handlebars
 router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    
+    res.redirect('/');
+    return;
+  }
   res.render('login');
+ 
 });
 // cpu.handlebars
 router.get('/cpu', async(req, res) => {
@@ -41,7 +47,7 @@ router.get('/cpu', async(req, res) => {
   
 
 
-    res.render('cpu',{cpuList,cpuPop});
+    res.render('cpu',{cpuList,cpuPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -78,7 +84,7 @@ router.get('/ram', async(req, res) => {
   
 
 
-    res.render('ram',{ramList,ramPop});
+    res.render('ram',{ramList,ramPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -115,7 +121,7 @@ router.get('/gpu', async(req, res) => {
   
 
 
-    res.render('gpu',{gpuList,gpuPop});
+    res.render('gpu',{gpuList,gpuPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -153,7 +159,7 @@ router.get('/hdd', async(req, res) => {
   
 
 
-    res.render('hdd',{hddList,hddPop});
+    res.render('hdd',{hddList,hddPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -189,7 +195,7 @@ router.get('/ssd', async(req, res) => {
   
 
 
-    res.render('ssd',{ssdList,ssdPop});
+    res.render('ssd',{ssdList,ssdPop,loggedIn: req.session.loggedIn});
     
     }
     catch (err) {
@@ -200,7 +206,7 @@ router.get('/ssd', async(req, res) => {
 });
 
 router.get('/build', (req, res) => {
-  res.render('build')
+  res.render('build',{loggedIn: req.session.loggedIn})
 });
 
 
