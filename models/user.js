@@ -34,14 +34,7 @@ class User extends Model {
           len: [6],
         },
       },
-      build_id:{
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'build',
-          key: 'id',
-        },
-      }
+    
     },
     {
       hooks: {

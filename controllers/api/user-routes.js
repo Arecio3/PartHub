@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
       const dbUserData = await User.findOne({
         where: {
           username: req.body.username,
-          password: req.body.password
+         
         },
       });
   

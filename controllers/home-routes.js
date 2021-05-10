@@ -178,7 +178,7 @@ router.get('/ssd', async(req, res) => {
   const data2 = await Ssd.findAll({
     where:{
       samples:{
-        [Op.between]:[500000,800000]
+        [Op.between]:[200000,800000]
       }
     },
     order: [['samples', 'DESC']]
